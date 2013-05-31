@@ -5,9 +5,9 @@ WellnessTracker::Application.routes.draw do
 
   resources :wellness_trackers, only: [ :new ]
 
-  # controller :sessions do 
-  #   get 'sign_in' => :new
-  #   post 'sign_in' => :create
-  #   delete 'logout' => :destroy
-  # end
+  controller :sessions do 
+    get 'login' => :new
+    post 'login' => :create
+    delete 'logout' => :destroy
+  end
 end
