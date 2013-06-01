@@ -15,8 +15,16 @@ feature "user creates a wellness tracker" do
     click_on "Create Wellness Tracker"
 
     expect(page).to have_css '#flash', text: "Wellness Tracker successfully created"
+  end
 
-    # fill_in 
+  scenario "unsuccessfully" do 
+    user = create(:user)
+    sign_in user
+
+    visit new_tracker_path
+    click_on "Create Wellness Tracker"
+
+    expect(page).to have_css '#error_explanation', text: "errors"
   end
 
 end

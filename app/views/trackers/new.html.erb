@@ -1,4 +1,5 @@
 <%= form_for @tracker do |f| %>
+  <%= render 'common/error_explanation', object: f.object %>
   <%= f.label :name %>
   <%= f.text_field :name %>
 
