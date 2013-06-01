@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  skip_before_action :authenticate_user, only: [ :new, :create ]
 
   def new
     @user = User.new
@@ -8,7 +9,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       sign_in @user
-      redirect_to new_wellness_tracker_path, success: "Thanks for signing up"
+      redirect_to dashboards_path, success: "Thanks for signing up"
     else
       render :new
     end
