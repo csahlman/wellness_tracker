@@ -1,0 +1,19 @@
+<%= form_for @tracker do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+
+  <%= f.label :current_weight, "Current Weight" %>
+  <%= f.text_field :current_weight %>
+
+  <%= f.label :goal_weight, "Goal Weight" %>
+  <%= f.text_field :goal_weight %>
+
+  <%= f.label :happiness_index, "Happiness" %>
+  <%= f.text_field :happiness_index %>
+
+  <%= f.submit "Create Wellness Tracker" %>
+
+<% end %>

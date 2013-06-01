@@ -19,8 +19,11 @@
     <span><%= link_to "Sign Up", new_user_path, data: { role: "signup" } %></span>
   <% end %>
 </header>
-
-<%= yield %>
-
+<div id="container">
+  <div id='flash'>
+    <%= render 'common/display_flash' if flash %>
+  </div>
+  <%= yield %>
+</div>
 </body>
 </html>

@@ -3,7 +3,7 @@ WellnessTracker::Application.routes.draw do
 
   resources :users, only: [ :new, :create ]
 
-  # resources :wellness_trackers, only: [ :new ]
+  resources :trackers, only: [ :new, :create, :show ]
 
   resources :dashboards, only: [ :index ]
 
