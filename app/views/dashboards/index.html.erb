@@ -1,1 +1,7 @@
 <%= link_to "Create Wellness Tracker", new_tracker_path %>
+
+<ul data-role="trackers">
+<% @trackers.each do |tracker| %>
+  <li><%= link_to tracker.name, tracker, data: { tracker: tracker.id } %></li>
+<% end %>
+</ul>
