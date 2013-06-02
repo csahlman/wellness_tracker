@@ -21,14 +21,16 @@ feature "user creates a wellness tracker" do
   
   end
 
-  scenario "unsuccessfully" do 
-    user = create(:user)
-    sign_in user
+  # scenario "unsuccessfully" do 
+  #   user = create(:user)
+  #   sign_in user
 
-    visit new_tracker_path
-    click_on "Create Wellness Tracker"
+  #   visit new_tracker_path
+  #   click_on "Create Wellness Tracker"
 
-    expect(page).to have_css '#error_explanation', text: "errors"
-  end
+  #   expect(page).to have_css '#error_explanation', text: "errors"
+  # end
+
+  pending "use timecop for dates and implement a date attribute for day"
 
 end

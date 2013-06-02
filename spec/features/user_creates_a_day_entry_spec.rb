@@ -2,7 +2,7 @@ require "spec_helper"
 
 feature "User creates a day entry" do 
 
-  scenario "for the current day" do 
+  scenario "for the current day successfully" do 
     user = create(:user)
     tracker = create(:tracker, user: user)
     sign_in user
@@ -25,7 +25,7 @@ feature "User creates a day entry" do
     expect(page).to have_css '#flash', text: "Day Saved"
   end
 
-  scenario "for the current day" do 
+  scenario "for the current day unsuccessfully" do 
     user = create(:user)
     tracker = create(:tracker, user: user)
     sign_in user
@@ -34,6 +34,15 @@ feature "User creates a day entry" do
     
     click_on "Create Day"
     expect(page).to have_css '#error_explanation', text: 'errors'
+  end
+
+  scenario "for an older day" do 
+    user = create(:user)
+    tracker = create(:tracker, user: user)
+    sign_in user
+    visit new_tracker_day_path(tracker)
+    
+
   end
 
 end

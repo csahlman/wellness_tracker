@@ -4,7 +4,7 @@ WellnessTracker::Application.routes.draw do
   resources :users, only: [ :new, :create ]
 
   resources :trackers, only: [ :new, :create, :show ] do 
-    resources :days, only: [ :create ]
+    resources :days, only: [ :create, :new ]
   end
 
   resources :dashboards, only: [ :index ]

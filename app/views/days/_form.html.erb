@@ -1,7 +1,6 @@
 <div data-description="currentday">
   <%= form_for [tracker, day] do |f| %>
     <%= render 'common/error_explanation', object: f.object %>
-    
     <div class="field">
       <%= f.label :hours_of_sleep, "Hours of sleep (previous night)" %>
       <%= f.number_field :hours_of_sleep %>
