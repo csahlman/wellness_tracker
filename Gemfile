@@ -32,12 +32,12 @@ gem 'jbuilder', '~> 1.0.1'
 gem 'high_voltage'
 
 group :test do
-  gem 'rspec-rails'
+  gem 'rspec-rails', git: 'git@github.com:rspec/rspec-rails.git'
   gem 'shoulda-matchers'
   gem 'capybara', '~> 2.1.0'
   gem "capybara-webkit"
   gem 'factory_girl_rails'
-  gem "database_cleaner", :git => 'git://github.com/bmabey/database_cleaner.git'
+  gem "database_cleaner", '1.0.0.RC1'
 end
 
 group :development do 
