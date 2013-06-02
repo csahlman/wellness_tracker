@@ -14,6 +14,7 @@
 #
 
 class Tracker < ActiveRecord::Base
+  has_many :days
   belongs_to :user
 
   validates :name, length: { within: 3..30 }

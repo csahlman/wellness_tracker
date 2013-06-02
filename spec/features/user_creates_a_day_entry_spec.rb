@@ -21,6 +21,19 @@ feature "User creates a day entry" do
       fill_in "Happiness", with: 8
       click_on "Create Day" 
     end
+
+    expect(page).to have_css '#flash', text: "Day Saved"
+  end
+
+  scenario "for the current day" do 
+    user = create(:user)
+    tracker = create(:tracker, user: user)
+    sign_in user
+
+    find("a[data-tracker='#{tracker.id}']").click
+    
+    click_on "Create Day"
+    expect(page).to have_css '#error_explanation', text: 'errors'
   end
 
 end

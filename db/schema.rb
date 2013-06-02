@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130601165926) do
+ActiveRecord::Schema.define(version: 20130602135206) do
+
+  create_table "days", force: true do |t|
+    t.integer  "hours_of_sleep"
+    t.integer  "hours_of_work"
+    t.integer  "hours_of_leisure"
+    t.integer  "minutes_spent_exercising"
+    t.integer  "calories_consumed"
+    t.integer  "alcoholic_drinks"
+    t.integer  "happiness_index"
+    t.integer  "tracker_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "days", ["tracker_id"], name: "index_days_on_tracker_id"
 
   create_table "trackers", force: true do |t|
     t.integer  "user_id"
