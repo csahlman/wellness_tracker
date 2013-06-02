@@ -15,6 +15,10 @@ feature "user creates a wellness tracker" do
     click_on "Create Wellness Tracker"
 
     expect(page).to have_css '#flash', text: "Wellness Tracker successfully created"
+    expect(page).to have_css '[data-role="description"]' 
+  
+  
+  
   end
 
   scenario "unsuccessfully" do 

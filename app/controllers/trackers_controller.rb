@@ -14,7 +14,8 @@ class TrackersController < ApplicationController
   end
 
   def show
-    
+    @tracker = current_user.trackers.find(params[:id])
+    @current_day = Day.new
   end
 
   private
