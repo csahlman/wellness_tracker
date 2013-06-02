@@ -16,21 +16,19 @@ feature "user creates a wellness tracker" do
 
     expect(page).to have_css '#flash', text: "Wellness Tracker successfully created"
     expect(page).to have_css '[data-role="description"]' 
-  
-  
-  
   end
 
-  # scenario "unsuccessfully" do 
-  #   user = create(:user)
-  #   sign_in user
+  scenario "unsuccessfully" do 
+    user = create(:user)
+    sign_in user
 
-  #   visit new_tracker_path
-  #   click_on "Create Wellness Tracker"
+    visit new_tracker_path
+    click_on "Create Wellness Tracker"
 
-  #   expect(page).to have_css '#error_explanation', text: "errors"
-  # end
+    expect(page).to have_css '#error_explanation', text: "errors"
+  end
 
   pending "use timecop for dates and implement a date attribute for day"
+  pending "add description/additional info fields to day"
 
 end

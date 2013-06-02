@@ -1,4 +1,6 @@
 <%= form_for @user do |f| %>
+  <%= render 'common/error_explanation', object: f.object %>
+
   <%= f.label :email %>
   <%= f.text_field :email %>
 
