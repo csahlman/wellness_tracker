@@ -40,9 +40,12 @@ feature "User creates a day entry" do
     user = create(:user)
     tracker = create(:tracker, user: user)
     sign_in user
-    visit new_tracker_day_path(tracker)
-    
+    find("a[data-tracker='#{tracker.id}']").click
 
+    find('[data-role="datepicker"]').set 2.days.ago.strftime("%m/%d/%Y")
+
+    expect(page).to have_css 'h3', text: 2.days.ago.strftime("%m/%d/%Y")
+    
   end
 
 end

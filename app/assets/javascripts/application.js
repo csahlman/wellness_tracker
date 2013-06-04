@@ -12,5 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.ui.core.min
+//= require jquery.ui.datepicker
 //= require turbolinks
-//= require_tree .
+//= require datepickers

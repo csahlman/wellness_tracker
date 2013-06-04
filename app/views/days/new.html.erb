@@ -1,7 +1,13 @@
 <div data-description="currentday">
+
+  <% if params[:date] %>
+    <h3>New Day for <%= params[:date] %></h3>
+  <% else %>
+
+  <% end %>
   <%= form_for [@tracker, @day] do |f| %>
     <%= render 'common/error_explanation', object: f.object %>
-    
+    <%= f.hidden_field :date %>
     <div class="field">
       <%= f.label :hours_of_sleep, "Hours of sleep (previous night)" %>
       <%= f.text_field :hours_of_sleep %>
