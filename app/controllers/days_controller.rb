@@ -1,9 +1,8 @@
 class DaysController < ApplicationController
 
   def new
-    pp params
     @tracker = current_user.trackers.find(params[:tracker_id])
-    @day = Day.new
+    @day = @tracker.days.find_by_date(params[:date]) || Day.new
   end
 
   def create

@@ -1,3 +1,21 @@
+# == Schema Information
+#
+# Table name: days
+#
+#  id                       :integer          not null, primary key
+#  hours_of_sleep           :integer
+#  hours_of_work            :integer
+#  hours_of_leisure         :integer
+#  minutes_spent_exercising :integer
+#  calories_consumed        :integer
+#  alcoholic_drinks         :integer
+#  happiness_index          :integer
+#  tracker_id               :integer
+#  created_at               :datetime
+#  updated_at               :datetime
+#  date                     :datetime
+#
+
 require "spec_helper"
 
 describe Day do 
