@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130605190748) do
+ActiveRecord::Schema.define(version: 20130615183753) do
 
   create_table "days", force: true do |t|
     t.integer  "hours_of_sleep"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20130605190748) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.datetime "date"
+    t.text     "extra_details"
   end
 
   add_index "days", ["date"], name: "index_days_on_date"

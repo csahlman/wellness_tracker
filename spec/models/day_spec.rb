@@ -14,6 +14,7 @@
 #  created_at               :datetime
 #  updated_at               :datetime
 #  date                     :datetime
+#  extra_details            :text
 #
 
 require "spec_helper"

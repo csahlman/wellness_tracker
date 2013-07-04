@@ -14,11 +14,12 @@
 #  created_at               :datetime
 #  updated_at               :datetime
 #  date                     :datetime
+#  extra_details            :text
 #
 
 class Day < ActiveRecord::Base
   belongs_to :tracker
-
+  
   validates :hours_of_sleep, presence: true, numericality: { 
     greater_than_or_equal_to: 0, less_than_or_equal_to: 24 }
   validates :hours_of_leisure, presence: true, numericality: { 
@@ -33,5 +34,6 @@ class Day < ActiveRecord::Base
     greater_than_or_equal_to: 0, less_than_or_equal_to: 35 }
   validates :happiness_index, presence: true, numericality: { 
     greater_than_or_equal_to: 1, less_than_or_equal_to: 10 }
+  validates :extra_details, length: { maximum: 1000 }
 
 end
