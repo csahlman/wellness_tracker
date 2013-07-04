@@ -15,4 +15,5 @@ class User < ActiveRecord::Base
   has_many :trackers
 
   validates :email, presence: true
+
 end

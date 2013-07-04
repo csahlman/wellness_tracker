@@ -1,0 +1,44 @@
+body {
+  background: teal;
+
+  #flash { 
+    width: 100%;
+
+  }
+}
+
+#container {
+  width: 980px;
+  border: 2px solid #fff;
+  color: green;
+  background: azure;
+}
+
+header { 
+  width: 980px;
+  border: 3px solid #000;
+  margin: 0 0 30px 0;
+  background: blue;
+  color: yellow;
+
+  .header_link {
+
+    padding: 0 10px 0 10px;
+
+    a { 
+      color: yellow;
+      font-style: italic;
+      text-decoration: none;
+      float: right;
+      font-size: 100%;
+    }
+
+    a:visited {
+      color: yellow;
+    }
+
+    a:hover { 
+      text-decoration: underline;
+    }
+  }
+}
