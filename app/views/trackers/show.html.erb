@@ -11,8 +11,12 @@
 
 </div>
 
-<div class="calender" data-role="calender">
+<%= form_for Activity.new do |f| %>
+  <%= f.select %w[Diary Food] %>
+<% end %>
+
+<!-- <div class="calender" data-role="calender">
   <input type="text" id="tracker_calender" data-role="datepicker">
-</div>
+</div> -->
 
 
