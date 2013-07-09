@@ -14,7 +14,7 @@
 #
 
 class Tracker < ActiveRecord::Base
-  has_many :days
+  has_many :activities, dependent: :destroy
   belongs_to :user
 
   validates :name, length: { within: 3..30 }

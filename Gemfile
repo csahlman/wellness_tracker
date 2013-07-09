@@ -35,6 +35,8 @@ gem 'jbuilder', '~> 1.0.1'
 
 gem 'high_voltage'
 
+gem 'simple_form'
+
 group :test do
   gem 'rspec-rails', git: 'git@github.com:rspec/rspec-rails.git'
   gem 'shoulda-matchers'

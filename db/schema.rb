@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130704040523) do
+ActiveRecord::Schema.define(version: 20130709131419) do
+
+  create_table "activities", force: true do |t|
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.string   "type"
+    t.integer  "tracker_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "activities", ["tracker_id"], name: "index_activities_on_tracker_id"
 
   create_table "trackers", force: true do |t|
     t.integer  "user_id"

@@ -9,5 +9,6 @@ feature "User creates a diary entry" do
     click_on tracker.name
     
     select("Diary", from: "activity_types")
+    click_on "Create Activity"
   end
 end
